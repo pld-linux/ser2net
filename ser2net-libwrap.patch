@@ -1,0 +1,24 @@
+--- ser2net-1.5/configure.in.orig	Sat Aug 11 09:56:41 2001
++++ ser2net-1.5/configure.in	Wed Sep  5 10:30:54 2001
+@@ -4,6 +4,19 @@
+ AC_PROG_CC
+ AC_STDC_HEADERS
+ AC_HAVE_HEADERS(tcpd.h)
+-AC_CHECK_LIB(nsl,main)
+-AC_CHECK_LIB(wrap,main)
++
++ac_save_LIBS="$LIBS"
++LIBS="-lwrap $LIBS"
++AC_TRY_LINK([
++#include <syslog.h>
++#include <tcpd.h>
++int allow_severity = LOG_INFO;
++int deny_severity = LOG_WARNING;
++],[],[ac_Lib=yes],[ac_Lib=no])
++LIBS="$ac_save_LIBS"
++if test "$ac_Lib" = "yes" ; then
++	AC_DEFINE_UNQUOTED(HAVE_LIBWRAP)
++	LIBS="$LIBS -lwrap"
++fi
++
+ AC_OUTPUT(Makefile)
