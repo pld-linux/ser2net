@@ -27,8 +27,8 @@ Program udostêpniaj±cy porty szeregowe przez po³±czenie TCP/IP.
 %build
 libtoolize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
