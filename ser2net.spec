@@ -27,7 +27,7 @@ Program udostêpniaj±cy porty szeregowe przez po³±czenie TCP/IP.
 %build
 rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
