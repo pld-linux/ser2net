@@ -5,7 +5,7 @@ Version:	1.6
 Release:	1
 License:	GPL
 Group:		Daemons
-Source0:	http://prdownloads.sf.net/ser2net/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/ser2net/%{name}-%{version}.tar.gz
 Patch0:		%{name}-libwrap.patch
 URL:		http://ser2net.sf.net/
 BuildRequires:	autoconf
