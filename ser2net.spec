@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Daemons
 Source0:	http://dl.sourceforge.net/ser2net/%{name}-%{version}.tar.gz
+# Source0-md5:	38ab3f3d6abcce2ded8b72332e6a0a68
 Patch0:		%{name}-libwrap.patch
 URL:		http://ser2net.sf.net/
 BuildRequires:	autoconf
