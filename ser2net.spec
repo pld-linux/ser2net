@@ -10,9 +10,10 @@ Group(pl):	Serwery
 Source0:	http://prdownloads.sf.net/ser2net/%{name}-%{version}.tar.gz
 Patch0:		%{name}-libwrap.patch
 URL:		http://ser2net.sf.net/
-BuildRequires:	libwrap-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
+BuildRequires:	libwrap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
