@@ -1,7 +1,7 @@
 Summary:	Serial to network proxy
 Summary(pl):	Proxy miêdzy portem szeregowym a sieci±
 Name:		ser2net
-Version:	1.5
+Version:	1.6
 Release:	1
 License:	GPL
 Group:		Daemons
@@ -39,14 +39,12 @@ install -d $RPM_BUILD_ROOT%{_sysconfdir}
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 install ser2net.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
-gzip -9nf README NEWS ChangeLog AUTHORS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README NEWS ChangeLog AUTHORS
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man8/*
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/ser2net.conf
