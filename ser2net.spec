@@ -26,7 +26,6 @@ Program udostêpniaj±cy porty szeregowe przez po³±czenie TCP/IP.
 %patch -p1
 
 %build
-#rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -38,7 +37,9 @@ Program udostêpniaj±cy porty szeregowe przez po³±czenie TCP/IP.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sysconfdir}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
 install ser2net.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
