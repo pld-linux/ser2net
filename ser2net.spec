@@ -1,7 +1,7 @@
 Summary:	Serial to network proxy
 Summary(pl):	Proxy miêdzy portem szeregowym a sieci±
 Name:		ser2net
-Version:	1.8
+Version:	1.9
 Release:	1
 License:	GPL
 Group:		Daemons
