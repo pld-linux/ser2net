@@ -25,6 +25,7 @@ Program udostêpniaj±cy porty szeregowe przez po³±czenie TCP/IP.
 %patch -p1
 
 %build
+rm -f missing
 libtoolize --copy --force
 aclocal
 %{__autoconf}
