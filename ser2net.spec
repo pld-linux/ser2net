@@ -5,8 +5,6 @@ Version:	1.5
 Release:	1
 License:	GPL
 Group:		Daemons
-Group(de):	Server
-Group(pl):	Serwery
 Source0:	http://prdownloads.sf.net/ser2net/%{name}-%{version}.tar.gz
 Patch0:		%{name}-libwrap.patch
 URL:		http://ser2net.sf.net/
