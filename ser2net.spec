@@ -50,4 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man8/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/ser2net.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/ser2net.conf
