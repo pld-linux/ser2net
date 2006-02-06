@@ -1,24 +1,25 @@
---- ser2net-1.5/configure.in.orig	Sat Aug 11 09:56:41 2001
-+++ ser2net-1.5/configure.in	Wed Sep  5 10:30:54 2001
-@@ -4,6 +4,19 @@
- AC_PROG_CC
+--- ser2net-2.3/configure.in.orig	2005-12-30 00:51:17.000000000 +0100
++++ ser2net-2.3/configure.in	2006-02-06 13:42:07.000000000 +0100
+@@ -16,8 +16,20 @@
+ if test "$tcp_wrappers" != "no"
+ then
+   AC_HAVE_HEADERS(tcpd.h)
+-  AC_CHECK_LIB(wrap,main)
++  ac_save_LIBS="$LIBS"
++  LIBS="-lwrap $LIBS"
++  AC_TRY_LINK([
++  #include <syslog.h>
++  #include <tcpd.h>
++  int allow_severity = LOG_INFO;
++  int deny_severity = LOG_WARNING;
++  ],[],[ac_Lib=yes],[ac_Lib=no])
++  LIBS="$ac_save_LIBS"
++  if test "$ac_Lib" = "yes" ; then
++  	AC_DEFINE_UNQUOTED(HAVE_LIBWRAP)
++  	LIBS="$LIBS -lwrap"
++  fi
+ fi
  AC_STDC_HEADERS
- AC_HAVE_HEADERS(tcpd.h)
 -AC_CHECK_LIB(nsl,main)
--AC_CHECK_LIB(wrap,main)
-+
-+ac_save_LIBS="$LIBS"
-+LIBS="-lwrap $LIBS"
-+AC_TRY_LINK([
-+#include <syslog.h>
-+#include <tcpd.h>
-+int allow_severity = LOG_INFO;
-+int deny_severity = LOG_WARNING;
-+],[],[ac_Lib=yes],[ac_Lib=no])
-+LIBS="$ac_save_LIBS"
-+if test "$ac_Lib" = "yes" ; then
-+	AC_DEFINE_UNQUOTED(HAVE_LIBWRAP)
-+	LIBS="$LIBS -lwrap"
-+fi
-+
++AC_SEARCH_LIBS(gethostbyname, nsl)
  AC_OUTPUT(Makefile)
