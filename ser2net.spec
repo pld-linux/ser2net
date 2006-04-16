@@ -8,7 +8,7 @@ Group:		Daemons
 Source0:	http://dl.sourceforge.net/ser2net/%{name}-%{version}.tar.gz
 # Source0-md5:	5f83a3e8aec18331cb61069dccdfba47
 Patch0:		%{name}-libwrap.patch
-URL:		http://ser2net.sf.net/
+URL:		http://ser2net.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
