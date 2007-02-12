@@ -1,5 +1,5 @@
 Summary:	Serial to network proxy
-Summary(pl):	Proxy miêdzy portem szeregowym a sieci±
+Summary(pl.UTF-8):   Proxy miÄ™dzy portem szeregowym a sieciÄ…
 Name:		ser2net
 Version:	2.3
 Release:	1
@@ -18,8 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Make serial ports available to network via TCP/IP connection.
 
-%description -l pl
-Program udostêpniaj±cy porty szeregowe przez po³±czenie TCP/IP.
+%description -l pl.UTF-8
+Program udostÄ™pniajÄ…cy porty szeregowe przez poÅ‚Ä…czenie TCP/IP.
 
 %prep
 %setup -q
