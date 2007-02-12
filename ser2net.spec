@@ -1,5 +1,5 @@
 Summary:	Serial to network proxy
-Summary(pl.UTF-8):   Proxy między portem szeregowym a siecią
+Summary(pl.UTF-8):	Proxy między portem szeregowym a siecią
 Name:		ser2net
 Version:	2.3
 Release:	1
