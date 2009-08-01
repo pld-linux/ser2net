@@ -1,12 +1,12 @@
 Summary:	Serial to network proxy
 Summary(pl.UTF-8):	Proxy między portem szeregowym a siecią
 Name:		ser2net
-Version:	2.5
+Version:	2.6
 Release:	1
 License:	GPL v2+
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/ser2net/%{name}-%{version}.tar.gz
-# Source0-md5:	c11f36ff2e4c523be7b282f2f6d03638
+# Source0-md5:	f53e067380ab31897923db665d044064
 Patch0:		%{name}-libwrap.patch
 URL:		http://ser2net.sourceforge.net/
 BuildRequires:	autoconf
