@@ -1,15 +1,15 @@
 Summary:	Serial to network proxy
 Summary(pl.UTF-8):	Proxy między portem szeregowym a siecią
 Name:		ser2net
-Version:	2.7
+Version:	2.10.0
 Release:	1
 License:	GPL v2+
 Group:		Networking/Daemons
-Source0:	http://dl.sourceforge.net/ser2net/%{name}-%{version}.tar.gz
-# Source0-md5:	22977477789868923a5de09a85e847dd
+Source0:	http://downloads.sourceforge.net/ser2net/%{name}-%{version}.tar.gz
+# Source0-md5:	cd937041144de83d41d811521e72158c
 Patch0:		%{name}-libwrap.patch
 URL:		http://ser2net.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	libwrap-devel
@@ -27,7 +27,7 @@ Program udostępniający porty szeregowe przez połączenie TCP/IP.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure \

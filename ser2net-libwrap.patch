@@ -1,6 +1,6 @@
---- ser2net-2.3/configure.in.orig	2005-12-30 00:51:17.000000000 +0100
-+++ ser2net-2.3/configure.in	2006-02-06 13:42:07.000000000 +0100
-@@ -16,8 +16,20 @@
+--- ser2net-2.10.0/configure.ac.orig	2005-12-30 00:51:17.000000000 +0100
++++ ser2net-2.10.0/configure.ac	2006-02-06 13:42:07.000000000 +0100
+@@ -16,9 +16,21 @@
  if test "$tcp_wrappers" != "no"
  then
    AC_HAVE_HEADERS(tcpd.h)
@@ -19,7 +19,8 @@
 +  	LIBS="$LIBS -lwrap"
 +  fi
  fi
+ AC_CONFIG_MACRO_DIR([m4])
  AC_STDC_HEADERS
 -AC_CHECK_LIB(nsl,main)
 +AC_SEARCH_LIBS(gethostbyname, nsl)
- AC_OUTPUT(Makefile)
+ AC_OUTPUT([Makefile ser2net.spec])
