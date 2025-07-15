@@ -28,7 +28,7 @@ Program udostępniający porty szeregowe przez połączenie TCP/IP.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__libtoolize}
